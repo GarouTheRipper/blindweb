@@ -6,112 +6,121 @@
   <title>BlindWeb | Seguridad y Desarrollo Web</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A2332',
+            secondary: '#4F9DDE',
+            accent: '#16a34a',
+            softGray: '#f3f4f6',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-softGray text-gray-900 font-sans">
   <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto py-6 px-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">BlindWeb</h1>
-      <nav>
-        <a href="#servicios" class="mx-2 text-blue-600 hover:underline">Servicios</a>
-        <a href="#sobre" class="mx-2 text-blue-600 hover:underline">Sobre mí</a>
-        <a href="#consejos" class="mx-2 text-blue-600 hover:underline">Consejos</a>
-        <a href="#alertas" class="mx-2 text-blue-600 hover:underline">Alertas</a>
-        <a href="#contacto" class="mx-2 text-blue-600 hover:underline">Contacto</a>
+  <header class="bg-white shadow fixed w-full z-50">
+    <div class="max-w-7xl mx-auto py-4 px-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-primary">BlindWeb</h1>
+      <nav class="space-x-4 text-sm font-medium">
+        <a href="#servicios" class="text-primary hover:underline">Servicios</a>
+        <a href="#diferenciales" class="text-primary hover:underline">Beneficios</a>
+        <a href="#alertas" class="text-primary hover:underline">Seguridad</a>
+        <a href="#portafolio" class="text-primary hover:underline">Proyectos</a>
+        <a href="#contacto" class="text-primary hover:underline">Contacto</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="bg-blue-600 text-white py-20">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h2 class="text-4xl font-bold mb-4">Páginas web profesionales y seguras para tu negocio</h2>
-      <p class="mb-6 text-lg">Crea, protege y crece con BlindWeb</p>
-      <a href="#contacto" class="bg-white text-blue-600 px-6 py-3 font-semibold rounded shadow hover:bg-gray-200">Solicita tu propuesta personalizada</a>
+  <section class="bg-primary text-white pt-32 pb-20 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Protege tu negocio en línea con tecnología real</h2>
+      <p class="mb-6 text-lg">Creamos páginas web profesionales y blindadas con ciberseguridad práctica.</p>
+      <a href="#contacto" class="bg-accent text-white px-6 py-3 rounded-md font-semibold shadow hover:bg-green-600 transition duration-300">Solicita tu propuesta personalizada</a>
     </div>
   </section>
 
-  <!-- Servicios -->
-  <section id="servicios" class="py-16 px-4">
-    <div class="max-w-5xl mx-auto">
-      <h3 class="text-3xl font-bold mb-8 text-center">Servicios</h3>
-      <div class="grid md:grid-cols-2 gap-10">
-        <div class="bg-white p-6 rounded shadow">
-          <h4 class="text-xl font-bold mb-2">Desarrollo Web</h4>
-          <p>Landing pages, portafolios, sitios informativos. Adaptados a móviles, rápidos y optimizados. Desde $999 MXN.</p>
+  <!-- Beneficios -->
+  <section id="diferenciales" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-10">¿Por qué elegir BlindWeb?</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">🔐 Seguridad integrada</h4>
+          <p>Diseñamos con buenas prácticas de ciberseguridad desde el inicio.</p>
         </div>
-        <div class="bg-white p-6 rounded shadow">
-          <h4 class="text-xl font-bold mb-2">Seguridad Digital</h4>
-          <p>Auditoría básica de seguridad, protección contra amenazas, configuración HTTPS y DNS seguro, respaldos automáticos.</p>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">⚡ Velocidad y rendimiento</h4>
+          <p>Webs optimizadas para móviles y carga rápida. Sin demoras innecesarias.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">📞 Soporte dedicado</h4>
+          <p>Te acompañamos en cada paso del camino, incluso después de entregar tu web.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Consejos de Seguridad -->
-  <section id="consejos" class="bg-gray-200 py-16 px-4">
-    <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-8">Consejos de Seguridad Digital</h3>
-      <div class="grid md:grid-cols-3 gap-6 text-left">
-        <div class="bg-white p-4 rounded shadow">
-          <h4 class="font-semibold mb-2">Usa contraseñas seguras</h4>
-          <p>Evita usar la misma contraseña en todos lados. Usa gestores como Bitwarden o 1Password.</p>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <h4 class="font-semibold mb-2">Activa la verificación en dos pasos</h4>
-          <p>Agrega una capa extra de seguridad a tus cuentas activando el 2FA con apps como Google Authenticator.</p>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <h4 class="font-semibold mb-2">Mantén tu sitio actualizado</h4>
-          <p>Actualizar tu sistema, plugins o scripts reduce el riesgo de vulnerabilidades.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Alertas de Seguridad -->
+  <!-- Seguridad -->
   <section id="alertas" class="bg-white py-16 px-4">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-3xl font-bold mb-8 text-center">Centro de Alertas de Seguridad</h3>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-red-50 border-l-4 border-red-400 p-4 shadow rounded">
-          <h4 class="font-bold text-lg">⚠️ Vulnerabilidad en WordPress (mayo 2025)</h4>
-          <p class="text-sm text-gray-700">Una falla en un plugin popular permite acceso no autorizado. Se recomienda actualizar de inmediato.</p>
+      <h3 class="text-3xl font-bold mb-8 text-center">Centro de Seguridad</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-red-50 border-l-4 border-red-500 p-4 shadow rounded">
+          <h4 class="font-bold text-lg">⚠️ Vulnerabilidad en WordPress</h4>
+          <p class="text-sm text-gray-700">Plugin popular con acceso no autorizado. Urgente actualizar.</p>
         </div>
         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 shadow rounded">
-          <h4 class="font-bold text-lg">🕵️ Campaña de phishing activa en WhatsApp</h4>
-          <p class="text-sm text-gray-700">Se hacen pasar por empresas de paquetería. No abras enlaces no verificados.</p>
+          <h4 class="font-bold text-lg">🎣 Campaña de phishing activa</h4>
+          <p class="text-sm text-gray-700">Enlaces falsos por WhatsApp suplantando paqueterías.</p>
         </div>
         <div class="bg-blue-50 border-l-4 border-blue-400 p-4 shadow rounded">
-          <h4 class="font-bold text-lg">🔐 Consejo semanal: BlindConsejo #7</h4>
-          <p class="text-sm text-gray-700">No descargues archivos ejecutables (.exe) de correos desconocidos, aunque parezcan legítimos.</p>
+          <h4 class="font-bold text-lg">🧠 BlindConsejo #7</h4>
+          <p class="text-sm text-gray-700">No abras archivos .exe de correos desconocidos, aunque parezcan reales.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sobre mí -->
-  <section id="sobre" class="bg-gray-100 py-16 px-4">
-    <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-4">Sobre nosotros</h3>
-      <p class="mb-6">Somos BlindWeb, una empresa enfocada en el desarrollo web profesional y la ciberseguridad aplicada. Creamos sitios modernos, rápidos, adaptados a móviles y, sobre todo, seguros desde su diseño.</p>
-      <h3 class="text-2xl font-bold mt-8 mb-2">Nuestra misión</h3>
-      <p>BlindWeb nace con una misión clara: proteger e impulsar la presencia digital de pequeños y medianos negocios. Combinamos diseño web profesional con ciberseguridad práctica para que nuestros clientes no solo tengan un sitio atractivo, sino también blindado frente a amenazas digitales.</p>
+  <!-- Portafolio -->
+  <section id="portafolio" class="bg-softGray py-16 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-10">Proyectos destacados</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="font-semibold mb-1">🌐 Café El Buen Sabor</h4>
+          <p class="text-sm text-gray-700">Landing page informativa para cafetería artesanal local.</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="font-semibold mb-1">🔐 Consultoría Segura</h4>
+          <p class="text-sm text-gray-700">Sitio profesional enfocado en servicios legales con seguridad avanzada.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="py-16 px-4">
+  <section id="contacto" class="py-20 px-4 bg-white">
     <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6">Contacto</h3>
-      <p class="mb-4">¿Listo para blindar tu presencia en línea?</p>
-      <a href="https://wa.me/5210000000000" class="bg-green-500 text-white px-6 py-3 font-semibold rounded shadow hover:bg-green-600">Contáctame por WhatsApp</a>
+      <h3 class="text-3xl font-bold mb-6">Contáctanos</h3>
+      <p class="mb-4">¿Listo para llevar tu negocio al siguiente nivel digital?</p>
+      <a href="https://wa.me/5210000000000" class="bg-accent text-white px-6 py-3 font-semibold rounded shadow hover:bg-green-600 transition duration-300">Habla con nosotros por WhatsApp</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white text-center py-6 shadow-inner">
+  <footer class="bg-primary text-white text-sm text-center py-6">
     <p>&copy; 2025 BlindWeb. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
+
